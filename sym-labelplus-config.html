@@ -44,6 +44,13 @@
 					</div>
 				</div>
 			</div>
+			<div class="config-option-ie11-overflow-fix" ng-show="config.warning.enabled && config.critical.enabled"> 
+				<div class="alert alert-warning" ng-show="config.warning.high>config.critical.high">The Warning High limit should be lower than the Critical High limit</div>
+				<div class="alert alert-warning" ng-show="config.warning.low<config.critical.low">The Warning Low limit should be greater than the Critical Low limit</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix" ng-show="config.warning.enabled"> 
+				<div class="alert alert-warning" ng-show="config.warning.high<config.warning.low">The Warning High limit should be greater than the Warning Low limit</div>
+			</div>
 			<div class="config-option-ie11-overflow-fix"> 
 				<div class="row">
 					<div class="form-group" ng-class="{'has-error':config.isNaN(config.warning.high)}">
@@ -76,6 +83,13 @@
 						</label>
 					</div>
 				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix" ng-show="config.warning.enabled && config.critical.enabled"> 
+				<div class="alert alert-warning" ng-show="config.warning.high>config.critical.high">The Warning High limit should be lower than the Critical High limit</div>
+				<div class="alert alert-warning" ng-show="config.warning.low<config.critical.low">The Warning Low limit should be greater than the Critical Low limit</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix" ng-show="config.critical.enabled"> 
+				<div class="alert alert-warning" ng-show="config.critical.high<config.critical.low">The Critical High limit should be greater than the Critical Low limit</div>
 			</div>
 			<div class="config-option-ie11-overflow-fix"> 
 				<div class="row">
