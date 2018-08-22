@@ -11,9 +11,11 @@ The functionalities of the symbol are the following:
  * Show/hide the PI tag engineering unit
  * Show/hide the PI tag label
  * Enable the "Warning" limit: based on configuration it is possible to specify an high limit and a low limit. If the warning limit is enabled, when the value of the tag goes upper the high limit or lower the low limit the symbol becomes yellow.
- * Enable the "Critical" limit: based on configuration it is possible to specify an high limit and a low limit. If the critical limit is enabled, when the value of the tag goes upper the high limit or lower the low limit the symbol becomes red.
+ * Enable the "Critical" limit: based on configuration it is possible to specify an high limit and a low limit. If the critical limit is enabled, when the value of the tag goes upper the high limit or lower the low limit the symbol becomes red.  (the critical limits should be outer the warning limits, if the user sets the warning high limit greater than the critical high limit or the warning low limit lower than the critical low limit, a warning alert appears)
  * Enable the "Blinking" effect: If the blinking effect is enabled, when the critical limits are overpassed the red coloring starts blinking
  * In case of errors during the communication between PI Vision and the PI Server (for example, the shutdown of the PI services in the PI server) an error label is shown.
+ * All the configurations are available in the relative configuration panel provided
+ * By clicking the About context menu item, a popup of informations appears.
 
 
 How to install the symbol:
