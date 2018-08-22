@@ -3,7 +3,7 @@ PI Vision custom symbol as final project for the PI Vision Extensibility course
 
 My custom symbol is called "Labelplus" is a Single tag PI vision symbol that shows the current value of a tag, the HTML component is highlighted based on some configured conditions. 
 
-The graphical appearance is build with the (twitter's) Bootstrap CSS framework (all the files are available in the libraries folder).
+The graphical appearance is build with the (twitter's) Bootstrap 3 CSS framework (all the files are available in the libraries folder).
 
 The functionalities of the symbol are the following:
 
