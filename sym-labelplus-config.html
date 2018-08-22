@@ -1,0 +1,110 @@
+<link rel="stylesheet" type="text/css" href="./Scripts/app/editor/symbols/ext/sym-empty.css">
+<link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/libraries/bootstrap3/css/bootstrap.min.css">
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"> 
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Configuration</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<label>Number of Decimals: {{config.displayDigits}}</label>
+						<input type="range" class="config-option-single-row-input form-control"
+							min="0" max="5" step="1"
+							title="{{config.displayDigits}}"
+							ng-model="config.displayDigits">
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<label>Show Label: <input type="checkbox" ng-model="config.showLabel">				
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<label>Show Eng. unit: <input type="checkbox" ng-model="config.showUnits">				
+						</label>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</li>
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Warning limits</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<label>Enable Warning Limits: <input type="checkbox" ng-model="config.warning.enabled">
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group" ng-class="{'has-error':config.isNaN(config.warning.high)}">
+						<label>Warning High Limit</label>
+						<input type="text" class="form-control"
+							ng-model="config.warning.high"
+							ng-disabled="!config.warning.enabled">
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group" ng-class="{'has-error':config.isNaN(config.warning.low)}">
+						<label>Warning Low Limit </label>
+						<input type="text" class="form-control"
+							ng-model="config.warning.low"
+							ng-disabled="!config.warning.enabled">
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Critical limits</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<label>Enable Critical Limits: <input type="checkbox" ng-model="config.critical.enabled">
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group" ng-class="{'has-error':config.isNaN(config.critical.high)}">
+						<label>critical High Limit</label>
+						<input type="text" class="form-control"
+							ng-model="config.critical.high"
+							ng-disabled="!config.critical.enabled">
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group" ng-class="{'has-error':config.isNaN(config.critical.low)}">
+						<label>critical Low Limit </label>
+						<input type="text" class="form-control"
+							ng-model="config.critical.low"
+							ng-disabled="!config.critical.enabled">
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<label>Enable Blinking: <input type="checkbox" ng-model="config.blinking.enabled">
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>

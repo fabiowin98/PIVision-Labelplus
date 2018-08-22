@@ -1,0 +1,5 @@
+//this CSS class is used in case of PI Vision errors (i.e. shutdown of PI services)
+.labelplus-error{
+	background-color:red;
+	color:yellow;
+}

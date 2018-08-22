@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="./Scripts/app/editor/symbols/ext/sym-empty.css">
+<link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/libraries/bootstrap3/css/bootstrap.min.css">
+<div class="container-fluid noExpandSelector">
+<div class="row">
+<div class="form-group" ng-class="{'has-warning':labelplus.warning, 'has-error':labelplus.critical}">
+<label class="control-label" ng-show="config.showLabel">{{labelplus.label}}</label>
+<div ng-class="{'input-group':config.showUnits}">
+<input type="text" class="form-control" value="{{labelplus.value | number: config.displayDigits}}" readonly>
+<div class="input-group-addon" ng-show="config.showUnits">{{labelplus.units}}</div>
+</div>
+<p ng-show="labelplus.error" class="labelplus-error">
+{{labelplus.error}}
+</p>
+</div>
+</div>
+</div>
