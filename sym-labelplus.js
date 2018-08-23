@@ -33,7 +33,11 @@
 			return { 
 				Height: 50,
 				Width: 150,
-				showLabel: true,		//this flag enables the label visualization
+				label: {
+					show: true,
+					color: "white",
+					background: "transparent"
+				},
 				showUnits: true,		//this flag enables the engineering unit visualization
 				warning: {
 					enabled: false,		//this flag enables the warning limits
@@ -52,7 +56,8 @@
 				isNaN: function(input){		//this function is used for the validation of the warning/critical limits
 					if(!input)return true;
 					return isNaN(input);
-				}
+				},
+				italianworkaround: false	//this is necessary for it-it numbering format (maybe somewhere else in the world?)
 			} 
 		},
 		configOptions: function (context, clickedElement) {
@@ -129,10 +134,10 @@
 
 		//this function converts non-american numbers in correct floating point values
 		function formatNumber(input){
-			if(PV.CurrentCulture=="it-IT"){ //need to add this for my testing environment
+			if(scope.config.italianworkaround){
 				var normalizedInput = input.replace(",",".");
-			}
-			return parseFloat(normalizedInput);
+				return parseFloat(normalizedInput);
+			}else{ return input; }
 		}
 	};
 

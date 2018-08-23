@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="./Scripts/app/editor/symbols/ext/sym-empty.css">
+<link rel="stylesheet" type="text/css" href="./Scripts/app/editor/symbols/ext/sym-labelplus.css">
 <link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/libraries/bootstrap3/css/bootstrap.min.css">
 <ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"> 
 	<li class="k-state-active"> 
@@ -18,7 +18,7 @@
 			<div class="config-option-ie11-overflow-fix"> 
 				<div class="row">
 					<div class="form-group">
-						<label>Show Label: <input type="checkbox" ng-model="config.showLabel">				
+						<label>Show Eng. unit: <input type="checkbox" ng-model="config.showUnits">				
 						</label>
 					</div>
 				</div>
@@ -26,12 +26,44 @@
 			<div class="config-option-ie11-overflow-fix"> 
 				<div class="row">
 					<div class="form-group">
-						<label>Show Eng. unit: <input type="checkbox" ng-model="config.showUnits">				
+						<label>Use Italian workaround: <input type="checkbox" ng-model="config.italianworkaround">				
 						</label>
 					</div>
 				</div>
 			</div>
 		</div> 
+	</li>
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Label</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<label>Show Label: <input type="checkbox" ng-model="config.label.show">				
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<label>Label font color</label>
+						<div style="width:85%;margin:10px 0 15px 20px;">
+						<pv-color-picker colorkeyword="Select the color" ng-model="config.label.color">
+						</pv-color-picker></div>
+					</div>
+				</div>
+			</div>
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="row">
+					<div class="form-group">
+						<div style="width:85%;margin:10px 0 15px 20px;">
+						<pv-color-picker colorkeyword="Select the color" ng-model="config.label.background">
+						</pv-color-picker></div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</li>
 	<li class="k-state-active"> 
 		<span class="panel-bar-label-no-wrap">Warning limits</span>
